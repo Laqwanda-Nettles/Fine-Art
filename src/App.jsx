@@ -1,11 +1,12 @@
-// import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import Banner from "./components/Banner";
-import Featured from "./components/Featured";
-import CuratedCollection from "./components/CurratedCollection";
-import AboutCTA from "./components/AboutCTA";
+import { Route, Routes } from "react-router";
+
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Banner from "./components/layout/Banner";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Collections from "./pages/Collections";
 
 function App() {
   return (
@@ -18,10 +19,13 @@ function App() {
           date="Oct 29th"
         />
       </header>
-      <Hero />
-      <Featured />
-      <CuratedCollection />
-      <AboutCTA />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/collections" element={<Collections />} />
+      </Routes>
+
       <Footer />
     </>
   );
