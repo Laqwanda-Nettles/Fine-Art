@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* --- Typography --- */
+  --font-sans: "Cormorant Garamond", serif;
+  --font-display: "Caveat", cursive;
+
+  /* --- Background & Muted Neutrals --- */
+  --color-bg-primary: #fbf8f1;
+  --color-bg-secondary: #f5ede0;
+  --color-bg-tertiary: #e5dac7;
+
+  /* --- Sage Green / Earthy Accents --- */
+  --color-sage-light: #bfc6b6;
+  --color-sage-medium: #8a9a86;
+  --color-sage-dark: #868f7a;
+
+  /* --- Warm / Terracotta Accents --- */
+  --color-accent-warm: #d59478;
+  --color-accent-orange: #c9641d;
+  --color-accent-peach: #daa082;
+  --color-accent-clay: #d9a05b;
+  --color-accent-rose: #c48b8b;
+
+  /* --- Deep Text & Dark Neutrals --- */
+  --color-text-main: #2c302e;
+  --color-text-dark: #1f222b;
+  --color-bg-dark: #3c3333;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-main);
+    min-height: 100vh;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-text-dark);
+  }
+}

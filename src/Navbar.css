@@ -1,0 +1,194 @@
+/* --- Sticky Glassmorphism Header --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+
+  /* Sticky positioning */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  /* Translucent background + blur */
+  background-color: rgba(
+    251,
+    248,
+    241,
+    0.82
+  ); /* Glassy version of --color-bg-primary */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-main);
+  padding: 0.5rem 0.75rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-sage-light);
+  border-radius: 4px;
+}
+
+/* --- Logo Styling --- */
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.logo > h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logo > p {
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* --- Socials & Secondary Nav --- */
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-nav-links a {
+  color: var(--color-text-main);
+  transition: color 0.2s ease;
+}
+
+.social-nav-links a:hover {
+  color: var(--color-sage-dark);
+}
+
+/* Toggle Button (Hidden on Desktop) */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-main);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* --- Mobile Breakpoint & Animated Glass Menu (< 768px) --- */
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  /* Slide-down glass drawer on mobile */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    z-index: 90;
+
+    /* Hidden initial state for GPU transition */
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+
+    /* Smooth animated opening/closing */
+    transition:
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.25s ease,
+      visibility 0.35s ease;
+  }
+
+  .nav-menu.is-active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu .nav-links {
+    flex-direction: column;
+    padding: 1.25rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo > h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Dimmed Screen Backdrop Overlay */
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    z-index: 80;
+    animation: fadeIn 0.25s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
