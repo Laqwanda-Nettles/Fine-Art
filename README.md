@@ -171,13 +171,13 @@ _Project structure will evolve as additional pages, features, and backend functi
 1. Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Laqwanda-Nettles/Fine-Art.git
 ```
 
 2. Navigate into the project directory:
 
 ```bash
-cd YOUR_PROJECT_DIRECTORY
+cd Fine-Art
 ```
 
 3. Install dependencies:
