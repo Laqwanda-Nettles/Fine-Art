@@ -70,7 +70,7 @@ The homepage introduces the artist and highlights selected artwork and curated c
 - Curated collection previews.
 - Artist statement and footer.
 
-![Homepage Wireframe](./public/homepage.png)
+![Homepage Wireframe](./docs/wireframe/homepage.png)
 
 ### Collections Page
 
@@ -83,11 +83,11 @@ The collections page provides visitors with a gallery-style browsing experience.
 - Artwork titles, mediums, and dimensions.
 - Decorative artwork frames and gallery-inspired presentation.
 
-![Collections Page Wireframe](./public/collections.png)
+![Collections Page Wireframe](./docs/wireframe/collections.png)
 
 ### About Page
 
-![About Page Wireframe](./public/aboutpage.png)
+![About Page Wireframe](./docs/wireframe/aboutpage.png)
 
 ### Design Direction
 
