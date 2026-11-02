@@ -1,7 +1,11 @@
+import ArtistProfile from "../components/ArtistProfile";
+import Contact from "../components/Contact";
+
 function About() {
   return (
     <>
-      <h2>About Page</h2>
+      <ArtistProfile />
+      <Contact />
     </>
   );
 }
