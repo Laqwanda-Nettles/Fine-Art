@@ -13,7 +13,7 @@ export default function ArtistProfile() {
             <div className="relative bg-bg-secondary p-4 rounded-xl border border-stone-300/80 shadow-md max-w-xs w-full">
               <div className="aspect-3/4 overflow-hidden rounded-lg bg-stone-300">
                 <img
-                  src="./public/portrait.jpg"
+                  src="/portrait.jpg"
                   alt="Heather Meyer - Artist Portrait"
                   className="w-full h-full object-cover grayscale contrast-125"
                 />
