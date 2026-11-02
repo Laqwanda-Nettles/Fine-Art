@@ -8,7 +8,6 @@ import ScrollToTop from "./components/layout/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Collections from "./pages/Collections";
-import ArtworkDetail from "./pages/Artwork";
 
 function App() {
   return (
