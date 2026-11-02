@@ -39,3 +39,35 @@ A record of the development process, completed milestones, challenges, and lesso
 - Finish connecting navigation links.
 - Add a contact form to the About page.
 - Begin planning the Supabase database structure.
+
+### Milestone 2: About Page and Route Scroll Management
+
+**What I worked on:**
+
+- Created an About page.
+- Built an ArtistProfile component with artist statement and biography tabs.
+- Created a Contact component with controlled form inputs and submission states.
+- Connected the homepage AboutCTA button to the About route.
+
+**What I learned:**
+
+- How to organize page content into reusable components.
+- How `useState` manages tab selection and form data.
+- How React Router handles navigation between pages.
+- How `useLocation` identifies the current route.
+- How `useEffect` can respond to route changes.
+- How `window.scrollTo()` controls browser scroll position.
+
+**Challenge encountered:**
+
+After navigating from the homepage to the About page, the browser remained near the previous scroll position instead of returning to the top.
+
+**Solution:**
+
+Created a reusable `ScrollToTop` component using `useLocation` and `useEffect` to reset the scroll position when the pathname changes.
+
+**Next steps:**
+
+- Connect the contact form to a real submission service.
+- Test navigation and section links.
+- Confirm artist content and imagery with Heather.
