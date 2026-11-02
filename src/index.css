@@ -3,7 +3,7 @@
 
 @theme {
   /* --- Typography --- */
-  --font-sans: "Cormorant Garamond", serif;
+  --font-sans: "Cormorant Garamond", Garamond, serif;
   --font-display: "Caveat", cursive;
 
   /* --- Background & Muted Neutrals --- */
