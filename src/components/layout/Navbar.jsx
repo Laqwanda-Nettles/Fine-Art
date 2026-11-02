@@ -51,7 +51,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="mobile-only">
-              <NavLink href="/about#contact" onClick={closeMenu}>
+              <NavLink to="/about#contact" onClick={closeMenu}>
                 INQUIRE
               </NavLink>
             </li>
@@ -70,7 +70,7 @@ function Navbar() {
         <div className="social-nav">
           <ul className="nav-links desktop-only">
             <li>
-              <NavLink href="/about#contact">INQUIRE</NavLink>
+              <NavLink to="/about#contact">INQUIRE</NavLink>
             </li>
           </ul>
           <ul className="social-nav-links">
